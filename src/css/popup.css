@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --color-black-1: #0e1335;
+    --color-black-1_hover: #14193a;
+    --color-white-1: #f3f1f1;
+    --color-gray-1: #b3b3b3;
+    --color-blue-1: #0058fa;
+    --color-blue-2: #80a4e8;
+    --radius-1: 5px;
+    --transition-1: all 0.3s;
+}
+
+body,
+html {
+    color: var(--color-white-1);
+}
+
+a {
+    color: var(--color-white-1);
+}
+
+form {
+    padding: 2em 1em 2em 1em;
+    display: grid;
+    place-items: center;
+    width: 30em;
+    background-color: var(--color-blue-1);
+    /* Layout */
+    display: grid;
+    grid-gap: 2em;
+}
+
+label {
+    font-weight: 500;
+}
+
+hr {
+    width: 100%;
+    opacity: 0.3;
+    color: var(--color-gray-1);
+}
+
+input,
+button {
+    outline: none;
+    border: 0;
+    border-radius: var(--radius-1);
+    padding: 0.9em;
+    width: 100%;
+}
+
+button {
+    background-color: var(--color-black-1_hover);
+    background-color: var(--color-black-1);
+    cursor: pointer;
+    color: var(--color-white-1);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: var(--color-black-1_hover);
+    transition: var(--transition-1);
+    transform: rotate(360deg);
+    transform: scale(1.01);
+}
+
+
+/* Form Fields */
+
+form .form__body {
+    display: grid;
+    grid-gap: 1em;
+    width: 25em;
+}
+
+div.form__body-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
