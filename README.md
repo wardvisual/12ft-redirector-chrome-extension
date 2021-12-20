@@ -2,9 +2,10 @@
 
 12ft Redirector is a Chrome Extension that will automatically redirect user defined paywall domains to use 12ft.io.
 
-- remove paywalls
-- banner ads
-- and other popups your favorite websites.
+- remove
+  - paywalls
+  - banner ads
+  - and other popups your favorite websites.
 
 ## On development phase...
 
