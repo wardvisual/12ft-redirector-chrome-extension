@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "This extension automatically redirect paywall domains to 12ft.io",
     "options_page": "options.html",
+    "permissions": ["activeTab", "tabs", "storage"],
     "background": {
         "page": "background.html"
     },
@@ -13,7 +14,6 @@
     "icons": {
         "128": "icon-128.png"
     },
-    "permissions": ["activeTab", "tabs", "storage"],
     "manifest_version": 2,
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
