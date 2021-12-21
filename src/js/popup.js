@@ -1,12 +1,14 @@
 import "../css/popup.css";
 
 class Popup {
-    saveOptions(urlInput) {
-        chrome.storage.sync.set({
+    constructor() {}
+
+    async saveOptions(urlInput) {
+        await chrome.storage.sync.set({
                 urlInput,
             },
             () => {
-                alert("Are you ready?");
+                window.location.reload();
             }
         );
     }
@@ -14,7 +16,7 @@ class Popup {
     async restoreOptions() {
         const urlInput = document.querySelector("#urlInput");
 
-        await chrome.storage.sync.get("urlInput", (data) => {
+        await chrome.storage.sync.get("urlInput", function(data) {
             urlInput.value = data.urlInput;
         });
     }
@@ -35,14 +37,11 @@ class Popup {
             const queryString = keyValuePair.join("");
 
             this.saveOptions(queryString);
-            return queryString;
         });
     }
 }
 
 const popup = new Popup();
 
-document.addEventListener("DOMContentLoaded", () => {
-    popup.handleForm();
-    popup.restoreOptions();
-});
+popup.handleForm();
+popup.restoreOptions();
